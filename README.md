@@ -1,4 +1,4 @@
-# Random-Planet-System-CSS
+# Random-Planet/s-System-CSS
  
 ## Рандомная планетарная система
 
