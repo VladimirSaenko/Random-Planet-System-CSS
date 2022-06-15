@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    background: rgb(11, 7, 7);
+    overflow: hidden;
+}
+
+#planetSystem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(11, 7, 7);
+    overflow: hidden;
+}
+
+.orbit {
+    position: absolute;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: white;
+}
+
+.orbit::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: translateX(-50%);
+    top: -12px;
+    left: 50%;
+    border-radius: 50%;
+    background: var(--col);
+    box-shadow: 0 0 20px var(--col),
+    0 0 60px var(--col);
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    /* background: yellow; */
+    border-radius: 50%;
+    /* box-shadow: 0 0 20px yellow,
+    0 0 60px rgb(255, 81, 0); */
+}
+
+.planet {
+    width: var(--sizes);
+    height: var(--sizes);
+    animation: rotating-anim var(--speed) linear infinite;
+}
+
+@keyframes rotating-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* @media screen and (min-width: 300px) and (max-width: 800px) {  
+
+} */
