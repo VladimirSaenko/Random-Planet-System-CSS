@@ -7,7 +7,7 @@ const sun = document.createElement('div');
 sun.classList.add('sun');
 let randomColorSun = sunColors[Math.floor(Math.random()*sunColors.length)];
 sun.style.background = randomColorSun;
-sun.style.boxShadow = `0 0 20px ${randomColorSun}, 0 0 60px ${randomColorSun}`
+sun.style.boxShadow = `0 0 20px ${randomColorSun}, 0 0 60px ${randomColorSun}`;
 planetSystem.appendChild(sun);
 
 if(window.matchMedia('(min-width: 300px) and (max-width: 800px)').matches) {
